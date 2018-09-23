@@ -4,9 +4,13 @@ example code for the Creative Technology Toolkit module on Creative Technology M
 
 http://uwecreativetechnology.com
 
-September 2018
+Dan Buzzo, September 2018
 
-With acknowledgement to the work of : 
+https://github.com/danbz
+
+https://buzzo.com 
+
+With acknowledgement to the work of :
 OpenFrameworks Introduction course at ICON http://www.icon-brussels.be/?page_id=1142
 and
 the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
@@ -19,6 +23,7 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
 
 • getting input to a system
 
+• using input to modify output
 
 # Session 2 -
 # Session 3 -
