@@ -25,30 +25,30 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
 
 • using input to modify output
 
-# Session 2 -
+# Session 2 - images, video, complex input
 
 • visual sensing
 
 
-# Session 3 -
+# Session 3 - 3D input and 3D output to screen
 
 • sensing in 3D
 
 • file input and output
 
-# Session 4 -
+# Session 4 - introduction to audio in openFrameworks
 
 • audio output
 
 • speech output
 
-# Session 5 -
+# Session 5 - introduction to complex transformation
 
 • algorithms and transformations
 
 • control and feedback
 
-# Session 6 -
+# Session 6 - thinking about systems and control
 
 • intelligence
 
