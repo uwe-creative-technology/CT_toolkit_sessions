@@ -6,7 +6,12 @@ http://uwecreativetechnology.com
 
 September 2018
 
-# Session 1 - introduction to OpenFrameworks 
+With acknowledgement to the work of : 
+OpenFrameworks Introduction course at ICON http://www.icon-brussels.be/?page_id=1142
+and
+the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
+
+# Session 1 - introduction to OpenFrameworks
 
 • running your first code
 
@@ -17,6 +22,6 @@ September 2018
 
 # Session 2 -
 # Session 3 -
-# Session 4 - 
+# Session 4 -
 # Session 5 -
 # Session 6 -
