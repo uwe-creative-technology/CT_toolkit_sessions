@@ -1,8 +1,12 @@
-# Creative Technology Toolkit session 1
+# Creative Technology Toolkit sessions
 
 example code for the Creative Technology Toolkit module on Creative Technology MSc at UWE Bristol
 
-Session - introduction to OpenFrameworks 
+http://uwecreativetechnology.com
+
+September 2018
+
+# Session 1 - introduction to OpenFrameworks 
 
 • running your first code
 
@@ -10,6 +14,9 @@ Session - introduction to OpenFrameworks
 
 • getting input to a system
 
-http://uwecreativetechnology.com
 
-September 2018
+# Session 2 -
+# Session 3 -
+# Session 4 - 
+# Session 5 -
+# Session 6 -
