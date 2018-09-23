@@ -1,4 +1,4 @@
-# Creative Technology Toolkit sessions
+# UWE Bristol Creative Technology Toolkit sessions
 
 example code for the Creative Technology Toolkit module on Creative Technology MSc at UWE Bristol
 
