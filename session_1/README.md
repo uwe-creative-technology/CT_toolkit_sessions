@@ -16,9 +16,14 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
 
 # Session 1 - introduction to OpenFrameworks
 
-• running your first code
-
-• drawing to the screen
+ • running your first code
+ • sending debug messages to yourself via the console
+ • drawing to the screen
  this example shows basic drawing types and illustrates the initial structure of an openFrameworks application.
+ • setting color values
+ • getting input to a system
+ • using input to your system to control drawing output
 
-• getting input to a system
+
+
+useful online colorpicker https://rgbcolorcode.com
