@@ -8,7 +8,7 @@ Dan Buzzo, September 2018
 
 https://github.com/danbz
 
-https://buzzo.com 
+https://buzzo.com
 
 With acknowledgement to the work of :
 OpenFrameworks Introduction course at ICON http://www.icon-brussels.be/?page_id=1142
@@ -26,7 +26,30 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
 • using input to modify output
 
 # Session 2 -
+
+• visual sensing
+
+
 # Session 3 -
+
+• sensing in 3D
+
+• file input and output
+
 # Session 4 -
+
+• audio output
+
+• speech output
+
 # Session 5 -
+
+• algorithms and transformations
+
+• control and feedback
+
 # Session 6 -
+
+• intelligence
+
+• ambient systems and environments
