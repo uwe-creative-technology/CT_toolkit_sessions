@@ -42,9 +42,9 @@ void ofApp::update(){
     for (int x=0; x<camWidth; x++ ) { // loop through all the pixels on a line
         ofColor color = pixels.getColor( x,  y); // get the pixels on line y
         videoInverted.setColor(x, y, color);
-        videoTexture.loadData(videoInverted);
         
     }
+    videoTexture.loadData(videoInverted);
     
     if (y>=camHeight) {
         y=0; // if we are on the bottom line of the image then start at the top again
