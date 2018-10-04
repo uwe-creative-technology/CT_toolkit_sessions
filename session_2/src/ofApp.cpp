@@ -73,7 +73,7 @@ void ofApp::draw(){
     vidGrabber.draw(0,0);
     
     // here we can draw our inverted video picture too, at a position across from the plain video
-    videoTexture.draw( camWidth, 0, camWidth, camHeight);
+    //    videoTexture.draw( camWidth, 0, camWidth, camHeight);
     
     // uncomment this section to enable the ASCII video effect
     //
