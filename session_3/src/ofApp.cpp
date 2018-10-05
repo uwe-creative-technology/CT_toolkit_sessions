@@ -17,13 +17,16 @@ void ofApp::setup() {
     kinect.setRegistration(true);
     
     kinect.init();
+    // other options we could use
     //kinect.init(true); // shows infrared instead of RGB video image
     //kinect.init(false, false); // disable video image (faster fps)
     
     kinect.open();        // opens first available kinect
+    // other options we could use
     //kinect.open(1);    // open a kinect by id, starting with 0 (sorted by serial # lexicographically))
     //kinect.open("A00362A08602047A");    // open a kinect using it's unique serial #
     
+    // send some setup info out to the console for debugging
     // print the intrinsic IR sensor values
     if(kinect.isConnected()) {
         ofLogNotice() << "sensor-emitter dist: " << kinect.getSensorEmitterDistance() << "cm";
@@ -36,12 +39,14 @@ void ofApp::setup() {
     kinect2.init();
     kinect2.open();
 #endif
-    
+    // set up the size of our image buffers we are going to use -
+    // we make them all the same width and height as the data we will get from the kinect
     colorImg.allocate(kinect.width, kinect.height);
     grayImage.allocate(kinect.width, kinect.height);
     grayThreshNear.allocate(kinect.width, kinect.height);
     grayThreshFar.allocate(kinect.width, kinect.height);
     
+    // set some values for filtering the data from the kinect
     nearThreshold = 230;
     farThreshold = 70;
     b_ThreshWithOpenCV = true;
@@ -61,9 +66,10 @@ void ofApp::update() {
     
     ofBackground(100, 100, 100);
     
+    // get fresh data from the kinect
     kinect.update();
     
-    // there is a new frame and we are connected
+    // if there is a new frame from the kinect and we are connected
     if(kinect.isFrameNew()) {
         
         // load grayscale depth image from the kinect source
@@ -129,8 +135,10 @@ void ofApp::draw() {
     
     // draw instructions
     ofSetColor(255, 255, 255);
-    stringstream reportStream;
+    stringstream reportStream; // make a stringstream object that we can put text
+    
     // here we assemble a string of text giving us a readout of what the kinect data is doing
+    // and put it into the stringstream object we just made
     if(kinect.hasAccelControl()) {
         reportStream << "accel is: " << ofToString(kinect.getMksAccel().x, 2) << " / "
         << ofToString(kinect.getMksAccel().y, 2) << " / "
@@ -151,7 +159,7 @@ void ofApp::draw() {
         reportStream << "press UP and DOWN to change the tilt angle: " << angle << " degrees" << endl
         << "press 1-5 & 0 to change the led mode" << endl;
     }
-    // here we draw our report string to the screen
+    // here we draw our report stringstream object to the screen
     ofDrawBitmapString(reportStream.str(), 20, 652);
     
 }
