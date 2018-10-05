@@ -29,6 +29,14 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
 
 • visual sensing
 
+• camera input
+
+• live data translation
+
+• loops
+
+• slit scan camera imaging
+
 
 # Session 3 - 3D input and 3D output to screen
 
