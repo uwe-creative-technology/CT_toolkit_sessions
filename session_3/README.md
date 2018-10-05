@@ -20,6 +20,17 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
 
 # Session 3
 
+• introduction to 3D
+
+• 3D primitives, cameras
+
 • sensing in 3D
 
+• reading data from Kinect Sensor
+
 • file input and output
+
+see also the openframeworks examples included in the standard oF install at;
+• oF-rootfolder/examples/computer_vision/kinect_example
+• oF-rootfolder/examples/3d/easyCamExample
+• oF-rootfolder/examples/3d/3DPrimitivesExample
