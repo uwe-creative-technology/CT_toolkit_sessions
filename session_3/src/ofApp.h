@@ -48,10 +48,6 @@ public:
     // here we define an instance of the kinect object to talk to our kinect sensor
     ofxKinect kinect;
     
-#ifdef USE_TWO_KINECTS
-    ofxKinect kinect2;
-#endif
-    
     // define some image objects to store our image data as we work
     ofxCvColorImage colorImg;
     ofxCvGrayscaleImage grayImage; // grayscale depth image

@@ -35,10 +35,6 @@ void ofApp::setup() {
         ofLogNotice() << "zero plane dist: " << kinect.getZeroPlaneDistance() << "mm";
     }
     
-#ifdef USE_TWO_KINECTS
-    kinect2.init();
-    kinect2.open();
-#endif
     // set up the size of our image buffers we are going to use -
     // we make them all the same width and height as the data we will get from the kinect
     colorImg.allocate(kinect.width, kinect.height);
@@ -105,9 +101,6 @@ void ofApp::update() {
         contourFinder.findContours(grayImage, 10, (kinect.width*kinect.height)/2, 20, false);
     }
     
-#ifdef USE_TWO_KINECTS
-    kinect2.update();
-#endif
 }
 
 //--------------------------------------------------------------
@@ -128,9 +121,6 @@ void ofApp::draw() {
         grayImage.draw(10, 320, 400, 300);
         contourFinder.draw(10, 320, 400, 300);
         
-#ifdef USE_TWO_KINECTS
-        kinect2.draw(420, 320, 400, 300);
-#endif
     }
     
     // draw instructions
@@ -203,9 +193,6 @@ void ofApp::exit() {
     kinect.setCameraTiltAngle(0); // zero the tilt on exit
     kinect.close();
     
-#ifdef USE_TWO_KINECTS
-    kinect2.close();
-#endif
 }
 
 //--------------------------------------------------------------
@@ -292,6 +279,10 @@ void ofApp::keyPressed (int key) {
             angle--;
             if(angle<-30) angle=-30;
             kinect.setCameraTiltAngle(angle);
+            break;
+            
+             case 'f':
+            ofToggleFullscreen();
             break;
     }
 }
