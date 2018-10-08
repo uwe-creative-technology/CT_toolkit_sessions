@@ -9,6 +9,86 @@
 		<string>46</string>
 		<key>objects</key>
 		<dict>
+			<key>A173F34E922531421DBD2F88</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxEspeakSynth.h</string>
+				<key>path</key>
+				<string>../../../../addons/ofxEspeakSynth/src/ofxEspeakSynth.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>BC6333A2B214A9368EC49291</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Utility.h</string>
+				<key>path</key>
+				<string>../../../../addons/ofxEspeakSynth/src/Utility.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>2BB4DDBCC01873DBC8C613B4</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>1342F680408D28ED4149CBA8</string>
+					<string>BC6333A2B214A9368EC49291</string>
+					<string>A173F34E922531421DBD2F88</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>src</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>B0E50F2222A58BEC71AC80F9</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>2BB4DDBCC01873DBC8C613B4</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>ofxEspeakSynth</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>E4B03E6B748AF67E1D5AFF72</key>
+			<dict>
+				<key>fileRef</key>
+				<string>1342F680408D28ED4149CBA8</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>1342F680408D28ED4149CBA8</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxEspeakSynth.cpp</string>
+				<key>path</key>
+				<string>../../../../addons/ofxEspeakSynth/src/ofxEspeakSynth.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
 			<key>6948EE371B920CB800B5AC1A</key>
 			<dict>
 				<key>children</key>
@@ -136,6 +216,12 @@ fi
 				<string>E4EB6923138AFD0F00A09F29</string>
 				<key>buildSettings</key>
 				<dict>
+					<key>HEADER_SEARCH_PATHS</key>
+					<array>
+						<string>$(OF_CORE_HEADERS)</string>
+						<string>src</string>
+						<string>../../../../addons/ofxEspeakSynth/src</string>
+					</array>
 					<key>CONFIGURATION_BUILD_DIR</key>
 					<string>$(SRCROOT)/bin/</string>
 					<key>COPY_PHASE_STRIP</key>
@@ -191,6 +277,12 @@ fi
 				<string>E4EB6923138AFD0F00A09F29</string>
 				<key>buildSettings</key>
 				<dict>
+					<key>HEADER_SEARCH_PATHS</key>
+					<array>
+						<string>$(OF_CORE_HEADERS)</string>
+						<string>src</string>
+						<string>../../../../addons/ofxEspeakSynth/src</string>
+					</array>
 					<key>COMBINE_HIDPI_IMAGES</key>
 					<string>YES</string>
 					<key>COPY_PHASE_STRIP</key>
@@ -230,7 +322,9 @@ fi
 			<key>BB4B014C10F69532006C3DED</key>
 			<dict>
 				<key>children</key>
-				<array />
+				<array>
+					<string>B0E50F2222A58BEC71AC80F9</string>
+				</array>
 				<key>isa</key>
 				<string>PBXGroup</string>
 				<key>name</key>
@@ -381,6 +475,12 @@ fi
 				<string>E4EB6923138AFD0F00A09F29</string>
 				<key>buildSettings</key>
 				<dict>
+					<key>HEADER_SEARCH_PATHS</key>
+					<array>
+						<string>$(OF_CORE_HEADERS)</string>
+						<string>src</string>
+						<string>../../../../addons/ofxEspeakSynth/src</string>
+					</array>
 					<key>CONFIGURATION_BUILD_DIR</key>
 					<string>$(SRCROOT)/bin/</string>
 					<key>COPY_PHASE_STRIP</key>
@@ -434,6 +534,12 @@ fi
 				<string>E4EB6923138AFD0F00A09F29</string>
 				<key>buildSettings</key>
 				<dict>
+					<key>HEADER_SEARCH_PATHS</key>
+					<array>
+						<string>$(OF_CORE_HEADERS)</string>
+						<string>src</string>
+						<string>../../../../addons/ofxEspeakSynth/src</string>
+					</array>
 					<key>CONFIGURATION_BUILD_DIR</key>
 					<string>$(SRCROOT)/bin/</string>
 					<key>COPY_PHASE_STRIP</key>
@@ -489,6 +595,7 @@ fi
 				<array>
 					<string>E4B69E200A3A1BDC003C02F2</string>
 					<string>E4B69E210A3A1BDC003C02F2</string>
+					<string>E4B03E6B748AF67E1D5AFF72</string>
 				</array>
 				<key>isa</key>
 				<string>PBXSourcesBuildPhase</string>
@@ -571,6 +678,12 @@ fi
 				<string>E4EB6923138AFD0F00A09F29</string>
 				<key>buildSettings</key>
 				<dict>
+					<key>HEADER_SEARCH_PATHS</key>
+					<array>
+						<string>$(OF_CORE_HEADERS)</string>
+						<string>src</string>
+						<string>../../../../addons/ofxEspeakSynth/src</string>
+					</array>
 					<key>COMBINE_HIDPI_IMAGES</key>
 					<string>YES</string>
 					<key>COPY_PHASE_STRIP</key>
@@ -611,6 +724,12 @@ fi
 				<string>E4EB6923138AFD0F00A09F29</string>
 				<key>buildSettings</key>
 				<dict>
+					<key>HEADER_SEARCH_PATHS</key>
+					<array>
+						<string>$(OF_CORE_HEADERS)</string>
+						<string>src</string>
+						<string>../../../../addons/ofxEspeakSynth/src</string>
+					</array>
 					<key>COMBINE_HIDPI_IMAGES</key>
 					<string>YES</string>
 					<key>COPY_PHASE_STRIP</key>
