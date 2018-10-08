@@ -40,9 +40,13 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
 
 # Session 3 - 3D input and 3D output to screen
 
+• introduction to 3D
+
+• 3D primitives, cameras
+
 • sensing in 3D
 
-• file input and output
+• reading data from Kinect Sensor
 
 # Session 4 - introduction to audio in openFrameworks
 
