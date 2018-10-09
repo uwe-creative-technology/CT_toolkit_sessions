@@ -23,6 +23,8 @@ https://buzzo.com
 
 • reading data from Kinect Sensor
 
+also discussing Git and github
+
 see also the openframeworks examples included in the standard oF install at;
 • oF-rootfolder/examples/computer_vision/kinect_example
 • oF-rootfolder/examples/3d/easyCamExample
