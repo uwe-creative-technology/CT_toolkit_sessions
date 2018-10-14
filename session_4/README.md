@@ -13,13 +13,12 @@ https://github.com/danbz
 
 https://buzzo.com
 
-With acknowledgement to the work of :
-OpenFrameworks Introduction course at ICON http://www.icon-brussels.be/?page_id=1142
-and
-the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
+
 
 # Session 4
 
 • audio output
 
 • speech output
+
+• see also ofxFlite for easy Text To Speech in openFrameWorks  https://github.com/danbz/ofxFlite-  (for OSX and Linux)
