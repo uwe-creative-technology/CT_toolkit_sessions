@@ -1,4 +1,4 @@
-# UWE Bristol Creative Technology Toolkit session four
+# UWE Bristol Creative Technology Toolkit session four: introduction to audio in openFrameworks
 
 https://github.com/uwe-creative-technology/CT_toolkit_sessions
 
