@@ -22,3 +22,5 @@ https://buzzo.com
 • speech output
 
 • see also ofxFlite for easy Text To Speech in openFrameWorks  https://github.com/danbz/ofxFlite-  (for OSX and Linux)
+
+• see oF_root/examples/sound/ for more details of waveform synthesis, audio input and FFT examples
