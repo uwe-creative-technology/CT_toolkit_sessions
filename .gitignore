@@ -6,8 +6,9 @@ $ pr -tW84 -s"|" -i" "1 -3 .gitignore
                            |*.perspectivev3    |##################
 /bin/*                     |*.mode1v3          |
 /*/bin/*
-!/bin/data/                |*.mode2v3          |# Linux
-/*!/bin/data/ 
+!/bin/data/
+               |*.mode2v3          |# Linux
+/*!/bin/data/
                            |# XCode 4          |*~
 #########                  |xcuserdata         |# KDE
 # general                  |*.xcworkspace      |.directory
