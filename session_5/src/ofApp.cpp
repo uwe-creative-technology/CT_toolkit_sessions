@@ -20,7 +20,7 @@ bool ofApp::sortOnOccurrences(const LyricWord &a, const LyricWord &b) {
 }
 
 
-// remove runction
+// remove function
 //--------------------------------------------------------------
 bool ofApp::removeWordIf(LyricWord &wrd) {
     
@@ -49,12 +49,188 @@ void ofApp::setup() {
     // load the font
     font.load("sans-serif", 18);
     sortTypeInfo = "no sort";
-    words.clear();
     
     // load the txt document into a ofBuffer
     ofBuffer buffer = ofBufferFromFile("freshprince.txt");
     string   content = buffer.getText();
+    setupWords(content);
     
+}
+
+
+//--------------------------------------------------------------
+void ofApp::update() {
+    
+}
+
+//--------------------------------------------------------------
+void ofApp::draw() {
+    
+    ofSetColor(50);
+    
+    ofPushMatrix();
+    ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
+    
+    float radius = 350;
+    
+    for(unsigned int i=0; i<words.size()/2; i++) {
+        float t = -HALF_PI + ofMap(i, 0, (words.size()/2), 0, TWO_PI);
+        float x = cos( t ) * radius;
+        float y = sin( t ) * radius;
+        float a = ofRadToDeg(atan2(y, x));
+        ofSetColor(0);
+        ofPushMatrix();
+        ofTranslate(x, y);
+        ofRotateZDeg(a);
+        float scl = 1;
+        glScalef(scl, scl, scl);
+        font.drawString(words[i].word, 0, 20);
+        ofPopMatrix();
+        
+    }
+    
+    ofSetColor(100);
+    font.drawString(sortTypeInfo, -(font.stringWidth(sortTypeInfo)/2), 0);
+    ofPopMatrix();
+    
+    
+    // instruction
+    ofSetColor(10);
+    ofDrawBitmapString("\nPress 1 for no sort\nPress 2 for alphabetical\nPress 3 for word length\nPress 4 for word occurrence", 20, 20);
+    
+    
+    
+}
+
+//--------------------------------------------------------------
+void ofApp::keyPressed  (int key){
+    
+    // sort raw
+    if(key == '1')     {
+        sortTypeInfo = "no sort";
+       // setup();
+    }
+    
+    // sort alphabetically
+    if(key == '2') {
+        sortTypeInfo = "sorting alphabetically";
+        ofSort(words, ofApp::sortOnABC);
+    }
+    
+    // sort by length of word
+    if(key == '3')     {
+        sortTypeInfo = "sorting on word length";
+        ofSort(words, ofApp::sortOnLength);
+    }
+    
+    // sort by length of word
+    if(key == '4')     {
+        sortTypeInfo = "sorting on word occurrences";
+        ofSort(words, ofApp::sortOnOccurrences);
+    }
+    
+    if (key == 'l'){
+        
+        //Open the Open File Dialog to load text file
+        ofFileDialogResult openFileResult= ofSystemLoadDialog("Select a txt file");
+        
+        //Check if the user opened a file
+        if (openFileResult.bSuccess){
+            
+            ofLogVerbose("User selected a file");
+            
+            //We have a file, check it and process it
+            processOpenFileSelection(openFileResult);
+            
+        }else {
+            ofLogVerbose("User hit cancel");
+        }
+    }
+    
+}
+
+//--------------------------------------------------------------
+void ofApp::keyReleased  (int key){
+    
+}
+
+//--------------------------------------------------------------
+void ofApp::mouseMoved(int x, int y ){
+    
+}
+
+//--------------------------------------------------------------
+void ofApp::mouseDragged(int x, int y, int button){
+    
+}
+
+//--------------------------------------------------------------
+void ofApp::mousePressed(int x, int y, int button){
+    
+}
+
+//--------------------------------------------------------------
+void ofApp::mouseReleased(int x, int y, int button){
+    
+}
+
+//--------------------------------------------------------------
+void ofApp::mouseEntered(int x, int y){
+    
+}
+
+//--------------------------------------------------------------
+void ofApp::mouseExited(int x, int y){
+    
+}
+
+//--------------------------------------------------------------
+void ofApp::windowResized(int w, int h){
+    
+}
+
+//--------------------------------------------------------------
+void ofApp::gotMessage(ofMessage msg){
+    
+}
+
+//--------------------------------------------------------------
+void ofApp::dragEvent(ofDragInfo dragInfo){
+    
+}
+//--------------------------------------------------------------
+
+void ofApp::processOpenFileSelection(ofFileDialogResult openFileResult){
+    
+    ofLogVerbose("getName(): "  + openFileResult.getName());
+    ofLogVerbose("getPath(): "  + openFileResult.getPath());
+    
+    ofFile file (openFileResult.getPath());
+    
+    if (file.exists()){
+        
+        ofLogVerbose("The file exists - now checking the type via file extension");
+        string fileExtension = ofToUpper(file.getExtension());
+        
+        //We only want text
+        if (fileExtension == "TXT") {
+            
+            // load the txt document into an ofBuffer
+            ofBuffer buffer = ofBufferFromFile(file);
+            string   content = buffer.getText();
+            setupWords(content);
+            
+            
+        }
+    }
+    
+}
+//--------------------------------------------------------------
+
+void ofApp::setupWords(string content){
+    
+    // take our text and process into a vector of words
+    words.clear();
     
     // take the content and split it up by spaces
     // we need to also turn new lines into spaces so we can seperate words on new lines as well
@@ -115,129 +291,4 @@ void ofApp::setup() {
     
     // remove word we do not want
     ofRemove(words, ofApp::removeWordIf);
-    
-}
-
-
-//--------------------------------------------------------------
-void ofApp::update() {
-    
-}
-
-//--------------------------------------------------------------
-void ofApp::draw() {
-    
-    ofSetColor(50);
-    
-    ofPushMatrix();
-    ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
-    
-    float radius = 350;
-    
-    for(unsigned int i=0; i<words.size()/2; i++) {
-        float t = -HALF_PI + ofMap(i, 0, (words.size()/2), 0, TWO_PI);
-        float x = cos( t ) * radius;
-        float y = sin( t ) * radius;
-        float a = ofRadToDeg(atan2(y, x));
-        ofSetColor(0);
-        ofPushMatrix();
-        ofTranslate(x, y);
-        ofRotateZDeg(a);
-        float scl = 1;
-        glScalef(scl, scl, scl);
-        font.drawString(words[i].word, 0, 20);
-        ofPopMatrix();
-        
-    }
-    
-    ofSetColor(100);
-    font.drawString(sortTypeInfo, -(font.stringWidth(sortTypeInfo)/2), 0);
-    ofPopMatrix();
-    
-    
-    // instruction
-    ofSetColor(10);
-    ofDrawBitmapString("\nPress 1 for no sort\nPress 2 for alphabetical\nPress 3 for word length\nPress 4 for word occurrence", 20, 20);
-    
-    
-    
-}
-
-//--------------------------------------------------------------
-void ofApp::keyPressed  (int key){
-    
-    // sort raw
-    if(key == '1')     {
-        sortTypeInfo = "no sort";
-        setup();
-    }
-    
-    // sort alphabetically
-    if(key == '2') {
-        sortTypeInfo = "sorting alphabetically";
-        ofSort(words, ofApp::sortOnABC);
-    }
-    
-    // sort by length of word
-    if(key == '3')     {
-        sortTypeInfo = "sorting on word length";
-        ofSort(words, ofApp::sortOnLength);
-    }
-    
-    // sort by length of word
-    if(key == '4')     {
-        sortTypeInfo = "sorting on word occurrences";
-        ofSort(words, ofApp::sortOnOccurrences);
-    }
-    
-}
-
-//--------------------------------------------------------------
-void ofApp::keyReleased  (int key){
-    
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseMoved(int x, int y ){
-    
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseDragged(int x, int y, int button){
-    
-}
-
-//--------------------------------------------------------------
-void ofApp::mousePressed(int x, int y, int button){
-    
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseReleased(int x, int y, int button){
-    
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseEntered(int x, int y){
-    
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseExited(int x, int y){
-    
-}
-
-//--------------------------------------------------------------
-void ofApp::windowResized(int w, int h){
-    
-}
-
-//--------------------------------------------------------------
-void ofApp::gotMessage(ofMessage msg){
-    
-}
-
-//--------------------------------------------------------------
-void ofApp::dragEvent(ofDragInfo dragInfo){
-    
 }

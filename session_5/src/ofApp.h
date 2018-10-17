@@ -43,4 +43,8 @@ public:
     ofTrueTypeFont      font;
     string              sortTypeInfo;
     vector <LyricWord>  words;
+    
+    void setupWords(string content);
+    void processOpenFileSelection(ofFileDialogResult openFileResult);
+    string originalFileExtension;
 };
