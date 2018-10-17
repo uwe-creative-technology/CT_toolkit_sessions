@@ -55,6 +55,13 @@ void ofApp::setup() {
     string   content = buffer.getText();
     setupWords(content);
     
+    // remote loading from web URL
+    
+    loading=false;
+    ofRegisterURLNotification(this);
+    
+  
+   
 }
 
 
@@ -147,6 +154,13 @@ void ofApp::keyPressed  (int key){
         }
     }
     
+    if (key == 'w'){
+        ofHttpResponse loadResult = ofLoadURL("http://www.google.com/robots.txt");
+        cout << "my awesome loadresult: " << endl;
+       // cout << "my awesome loadresult: " << ofToString( loadResult.data) << endl;
+
+        urlResponse(loadResult);
+    }
 }
 
 //--------------------------------------------------------------
@@ -292,3 +306,19 @@ void ofApp::setupWords(string content){
     // remove word we do not want
     ofRemove(words, ofApp::removeWordIf);
 }
+
+void ofApp::urlResponse(ofHttpResponse & response){
+        if(response.status==200 ){
+            // if our web request works the set up the text returned
+        string   content = response.data;
+        cout << "my awesome response request name parsed" << ofToString( response.request.name)  << endl;
+        setupWords(content);
+        
+        loading=false;
+    }else{
+        
+        cout << response.status << " " << response.error << " for request " << response.request.name << endl;
+        if(response.status!=-1) loading=false;
+    }
+}
+

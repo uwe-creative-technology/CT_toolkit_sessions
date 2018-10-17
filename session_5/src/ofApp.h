@@ -47,4 +47,8 @@ public:
     void setupWords(string content);
     void processOpenFileSelection(ofFileDialogResult openFileResult);
     string originalFileExtension;
+    
+    
+    void urlResponse(ofHttpResponse & response);
+    bool loading;
 };
