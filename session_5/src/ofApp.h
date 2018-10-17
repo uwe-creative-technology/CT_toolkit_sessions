@@ -51,4 +51,8 @@ public:
     
     void urlResponse(ofHttpResponse & response);
     bool loading;
+    
+    ofEasyCam cam;
+    float autoRotateDeg, rotateStep;
+    bool b_autoRotate;
 };

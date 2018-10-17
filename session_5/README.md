@@ -36,7 +36,9 @@ This example demonstrates how to sort a vector alphabetically, by word length or
 * load words from a file into a vector
 * create custom sorting functions
 * sort the vector using the function ```ofSort()```
-
+* view text in 3D with easyCam
+* load text from file using fileDialog
+* load text from a remote URL on the web
 
 also
 
@@ -58,7 +60,8 @@ Instructions for use:
 
 * Press keys from ```1``` to ```4``` to switch sorting algorithms.
 * press ```l``` to open file dialog to lad text file from disk
-* pres ```w``` to load a txt file from the web at a remote url
+* press ```w``` to load a txt file from the web at a remote url
+* press ```b``` to autorotate the circle in 3d
 
 ### Other classes used in this file
 

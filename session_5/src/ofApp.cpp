@@ -61,22 +61,29 @@ void ofApp::setup() {
     ofRegisterURLNotification(this);
     
   
-   
+    autoRotateDeg = 0.0f;
+    rotateStep = 0.1f; // autorotate speed
+    b_autoRotate = false;
 }
 
 
 //--------------------------------------------------------------
 void ofApp::update() {
-    
+    if (autoRotateDeg < 360){
+        autoRotateDeg += rotateStep;
+    } else {
+        autoRotateDeg =0;
+    }
 }
 
 //--------------------------------------------------------------
 void ofApp::draw() {
     
+    cam.begin();
     ofSetColor(50);
     
     ofPushMatrix();
-    ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
+    //ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
     
     float radius = 350;
     
@@ -87,8 +94,12 @@ void ofApp::draw() {
         float a = ofRadToDeg(atan2(y, x));
         ofSetColor(0);
         ofPushMatrix();
-        ofTranslate(x, y);
-        ofRotateZDeg(a);
+        if (b_autoRotate) {
+            ofRotateZDeg(autoRotateDeg); // autorotate the word circle
+            ofRotateYDeg(autoRotateDeg); // autorotate the word circle
+        }
+        ofTranslate(x, y );
+        ofRotateZDeg(a );
         float scl = 1;
         glScalef(scl, scl, scl);
         font.drawString(words[i].word, 0, 20);
@@ -99,7 +110,7 @@ void ofApp::draw() {
     ofSetColor(100);
     font.drawString(sortTypeInfo, -(font.stringWidth(sortTypeInfo)/2), 0);
     ofPopMatrix();
-    
+    cam.end();
     
     // instruction
     ofSetColor(10);
@@ -160,6 +171,11 @@ void ofApp::keyPressed  (int key){
        // cout << "my awesome loadresult: " << ofToString( loadResult.data) << endl;
 
         urlResponse(loadResult);
+    }
+    
+    
+    if (key == 'r'){
+        b_autoRotate=!b_autoRotate;
     }
 }
 
