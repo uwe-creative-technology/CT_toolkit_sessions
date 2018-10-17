@@ -80,7 +80,7 @@ void ofApp::update() {
 void ofApp::draw() {
     
     cam.begin();
-    ofSetColor(50);
+    ofSetColor(255,0,0); // set the color to red to draw the first word
     
     ofPushMatrix();
     //ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
@@ -92,11 +92,11 @@ void ofApp::draw() {
         float x = cos( t ) * radius;
         float y = sin( t ) * radius;
         float a = ofRadToDeg(atan2(y, x));
-        ofSetColor(0);
+        
         ofPushMatrix();
         if (b_autoRotate) {
             ofRotateZDeg(autoRotateDeg); // autorotate the word circle
-            ofRotateYDeg(autoRotateDeg); // autorotate the word circle
+            ofRotateYDeg(autoRotateDeg/2.0); // autorotate the word circle
         }
         ofTranslate(x, y );
         ofRotateZDeg(a );
@@ -104,7 +104,7 @@ void ofApp::draw() {
         glScalef(scl, scl, scl);
         font.drawString(words[i].word, 0, 20);
         ofPopMatrix();
-        
+        ofSetColor(0); // set all the rest of the words to black
     }
     
     ofSetColor(100);
@@ -114,7 +114,7 @@ void ofApp::draw() {
     
     // instruction
     ofSetColor(10);
-    ofDrawBitmapString("\nPress 1 for no sort\nPress 2 for alphabetical\nPress 3 for word length\nPress 4 for word occurrence", 20, 20);
+    ofDrawBitmapString("\nPress 1 for no sort\nPress 2 for alphabetical\nPress 3 for word length\nPress 4 for word occurrence\nr to autorotate\nw to load text from the web\nl to load a txt file form disk \nf for fullscreen", 20, 20);
     
     
     
@@ -176,6 +176,9 @@ void ofApp::keyPressed  (int key){
     
     if (key == 'r'){
         b_autoRotate=!b_autoRotate;
+    }
+    if (key == 'f'){
+        ofToggleFullscreen();
     }
 }
 
