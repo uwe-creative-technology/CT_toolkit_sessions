@@ -47,7 +47,9 @@ void ofApp::setup() {
     ofTrueTypeFont::setGlobalDpi(96);
     
     // load the font
-    font.load("sans-serif", 18);
+    //font.load("sans-serif", 18);
+    font.load("monospace", 18);
+
     sortTypeInfo = "no sort";
     
     // load the txt document into a ofBuffer
@@ -83,7 +85,6 @@ void ofApp::draw() {
     ofSetColor(255,0,0); // set the color to red to draw the first word
     
     ofPushMatrix();
-    //ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
     
     float radius = 350;
     
@@ -95,8 +96,8 @@ void ofApp::draw() {
         
         ofPushMatrix();
         if (b_autoRotate) {
-            ofRotateZDeg(autoRotateDeg); // autorotate the word circle
-            ofRotateYDeg(autoRotateDeg/2.0); // autorotate the word circle
+            ofRotateZDeg(autoRotateDeg*2.0); // autorotate the word circle
+            ofRotateYDeg(autoRotateDeg); // autorotate the word circle
         }
         ofTranslate(x, y );
         ofRotateZDeg(a );
@@ -115,9 +116,6 @@ void ofApp::draw() {
     // instruction
     ofSetColor(10);
     ofDrawBitmapString("\nPress 1 for no sort\nPress 2 for alphabetical\nPress 3 for word length\nPress 4 for word occurrence\nr to autorotate\nw to load text from the web\nl to load a txt file form disk \nf for fullscreen", 20, 20);
-    
-    
-    
 }
 
 //--------------------------------------------------------------
@@ -253,7 +251,6 @@ void ofApp::processOpenFileSelection(ofFileDialogResult openFileResult){
             string   content = buffer.getText();
             setupWords(content);
             
-            
         }
     }
     
@@ -296,8 +293,7 @@ void ofApp::setupWords(string content){
             ofStringReplace(words[i].word, removeStr, "");
         }
     }
-    
-    
+        
     // count the amount of times that we see a word
     for (unsigned int i=0; i<words.size(); i++) {
         int c = 1;
