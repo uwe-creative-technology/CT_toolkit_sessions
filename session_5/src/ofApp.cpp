@@ -22,7 +22,7 @@ bool ofApp::sortOnOccurrences(const LyricWord &a, const LyricWord &b) {
 
 // remove function
 //--------------------------------------------------------------
-bool ofApp::removeWordIf(LyricWord &wrd) {
+bool ofApp::removeWordIf(LyricWord &wrd) { 
     
     bool bRemove = false;
     static string ignoreWords[11] = {"the", "to", "of", "a", "and", "i", "it", "if", "is", "in", "be"};
@@ -49,7 +49,8 @@ void ofApp::setup() {
     // load the font
     //font.load("sans-serif", 18);
     font.load("monospace", 18);
-
+    //font.load("sans-serif", 18); // use different typefaces
+    
     sortTypeInfo = "no sort";
     
     // load the txt document into a ofBuffer
@@ -57,12 +58,11 @@ void ofApp::setup() {
     string   content = buffer.getText();
     setupWords(content);
     
-    // remote loading from web URL
-    
+    // set remote loading from web URL parameters
     loading=false;
     ofRegisterURLNotification(this);
     
-  
+    // set up the 3d autorotate parameters
     autoRotateDeg = 0.0f;
     rotateStep = 0.1f; // autorotate speed
     b_autoRotate = false;
@@ -71,11 +71,7 @@ void ofApp::setup() {
 
 //--------------------------------------------------------------
 void ofApp::update() {
-    if (autoRotateDeg < 360){
-        autoRotateDeg += rotateStep;
-    } else {
-        autoRotateDeg =0;
-    }
+    
 }
 
 //--------------------------------------------------------------
@@ -95,10 +91,11 @@ void ofApp::draw() {
         float a = ofRadToDeg(atan2(y, x));
         
         ofPushMatrix();
-        if (b_autoRotate) {
-            ofRotateZDeg(autoRotateDeg*2.0); // autorotate the word circle
-            ofRotateYDeg(autoRotateDeg); // autorotate the word circle
-        }
+        
+        // use autorotate counter to rotate in z and y axes
+        ofRotateZDeg(autoRotateDeg*2.0); // autorotate the word circle
+        ofRotateYDeg(autoRotateDeg); // autorotate the word circle
+        
         ofTranslate(x, y );
         ofRotateZDeg(a );
         float scl = 1;
@@ -116,6 +113,16 @@ void ofApp::draw() {
     // instruction
     ofSetColor(10);
     ofDrawBitmapString("\nPress 1 for no sort\nPress 2 for alphabetical\nPress 3 for word length\nPress 4 for word occurrence\nr to autorotate\nw to load text from the web\nl to load a txt file form disk \nf for fullscreen", 20, 20);
+    
+    // if we are using autorotate then increment the amount to rotate by
+    if (b_autoRotate){
+        if (autoRotateDeg < 360){
+            autoRotateDeg += rotateStep;
+        } else {
+            autoRotateDeg =0; // if it has rotated 360 steps then start again at 0
+        }
+    }
+    
 }
 
 //--------------------------------------------------------------
@@ -124,7 +131,7 @@ void ofApp::keyPressed  (int key){
     // sort raw
     if(key == '1')     {
         sortTypeInfo = "no sort";
-       // setup();
+        // setup();
     }
     
     // sort alphabetically
@@ -166,8 +173,8 @@ void ofApp::keyPressed  (int key){
     if (key == 'w'){
         ofHttpResponse loadResult = ofLoadURL("http://www.google.com/robots.txt");
         cout << "my awesome loadresult: " << endl;
-       // cout << "my awesome loadresult: " << ofToString( loadResult.data) << endl;
-
+        // cout << "my awesome loadresult: " << ofToString( loadResult.data) << endl;
+        
         urlResponse(loadResult);
     }
     
@@ -293,7 +300,7 @@ void ofApp::setupWords(string content){
             ofStringReplace(words[i].word, removeStr, "");
         }
     }
-        
+    
     // count the amount of times that we see a word
     for (unsigned int i=0; i<words.size(); i++) {
         int c = 1;
@@ -323,8 +330,8 @@ void ofApp::setupWords(string content){
 }
 
 void ofApp::urlResponse(ofHttpResponse & response){
-        if(response.status==200 ){
-            // if our web request works the set up the text returned
+    if(response.status==200 ){
+        // if our web request works the set up the text returned
         string   content = response.data;
         cout << "my awesome response request name parsed" << ofToString( response.request.name)  << endl;
         setupWords(content);
