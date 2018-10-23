@@ -1,45 +1,7 @@
 #include "ofApp.h"
 
 
-// sort on abc's
-//--------------------------------------------------------------
-bool ofApp::sortOnABC(const LyricWord &a, const LyricWord &b) {
-    return a.word < b.word;
-}
 
-// sort on word length
-//--------------------------------------------------------------
-bool ofApp::sortOnLength(const LyricWord &a, const LyricWord &b) {
-    return (int)a.word.size() > (int)b.word.size();
-}
-
-// sort on occurrences
-//--------------------------------------------------------------
-bool ofApp::sortOnOccurrences(const LyricWord &a, const LyricWord &b) {
-    return a.occurrences > b.occurrences;
-}
-
-
-// remove function
-//--------------------------------------------------------------
-bool ofApp::removeWordIf(LyricWord &wrd) { 
-    
-    bool bRemove = false;
-    static string ignoreWords[11] = {"the", "to", "of", "a", "and", "i", "it", "if", "is", "in", "be"};
-    
-    // if this word empty
-    if(wrd.word.empty()) bRemove = true;
-    
-    // are we a word that we do now want
-    for (int j=0; j<11; j++) {
-        if(wrd.word == ignoreWords[j]) {
-            bRemove = true;
-            break;
-        }
-    }
-    
-    return bRemove;
-}
 
 //--------------------------------------------------------------
 void ofApp::setup() {
@@ -329,6 +291,9 @@ void ofApp::setupWords(string content){
     ofRemove(words, ofApp::removeWordIf);
 }
 
+//--------------------------------------------------------------
+
+
 void ofApp::urlResponse(ofHttpResponse & response){
     if(response.status==200 ){
         // if our web request works the set up the text returned
@@ -344,3 +309,43 @@ void ofApp::urlResponse(ofHttpResponse & response){
     }
 }
 
+
+// sort on abc's
+//--------------------------------------------------------------
+bool ofApp::sortOnABC(const LyricWord &a, const LyricWord &b) {
+    return a.word < b.word;
+}
+
+// sort on word length
+//--------------------------------------------------------------
+bool ofApp::sortOnLength(const LyricWord &a, const LyricWord &b) {
+    return (int)a.word.size() > (int)b.word.size();
+}
+
+// sort on occurrences
+//--------------------------------------------------------------
+bool ofApp::sortOnOccurrences(const LyricWord &a, const LyricWord &b) {
+    return a.occurrences > b.occurrences;
+}
+
+
+// remove function
+//--------------------------------------------------------------
+bool ofApp::removeWordIf(LyricWord &wrd) {
+    
+    bool bRemove = false;
+    static string ignoreWords[11] = {"the", "to", "of", "a", "and", "i", "it", "if", "is", "in", "be"};
+    
+    // if this word empty
+    if(wrd.word.empty()) bRemove = true;
+    
+    // are we a word that we do now want
+    for (int j=0; j<11; j++) {
+        if(wrd.word == ignoreWords[j]) {
+            bRemove = true;
+            break;
+        }
+    }
+    
+    return bRemove;
+}
