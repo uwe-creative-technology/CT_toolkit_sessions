@@ -7,19 +7,16 @@ example code for the Creative Technology Toolkit module on Creative Technology M
 
 http://uwecreativetechnology.com
 
-Dan Buzzo, September 2018
+Dan Buzzo, November 2018
 
 https://github.com/danbz
 
 https://buzzo.com
 
-With acknowledgement to the work of :
-OpenFrameworks Introduction course at ICON http://www.icon-brussels.be/?page_id=1142
-and
-the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
+
 
 # Session 6
 
-• intelligence
+• simple algorithms
 
-• ambient systems and environments
+• drunkards walk 3 ways including Perlin Noise
