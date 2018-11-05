@@ -21,4 +21,11 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 		
+    // drunkards walk demo
+    vector<ofVec2f> drunkardsSteps; // a vector - list to contain out x,y set values
+    
+    void addStep(); // functions to add large or small steps/staggers
+    void addStagger();
+    
+    int staggerSize; 
 };
