@@ -13,6 +13,8 @@ void ofApp::setup(){
     staggerSize =60; // set how far to stagger when we add staggers to the walk of points
     
     b_drawGui = true;
+    
+    // font.load("monospace", 12); // load a trueType font
 }
 
 //--------------------------------------------------------------
@@ -37,8 +39,10 @@ void ofApp::draw(){
         ofDrawLine(prevStepX, prevStepY,curStepX, curStepY); // draw a line between the last point and the current point
         
         if (b_drawGui){
-        ofSetColor(0);
-        ofDrawBitmapString(i, curStepX, curStepY); // number the point
+            ofSetColor(0);
+            ofDrawBitmapString(i, curStepX, curStepY); // number the point
+            // font.drawString(ofToString(i), curStepX, curStepY);// alternatively draw the number witha truetype font that will work in 3d
+            
         }
         
         prevStepX = curStepX; // update the value of the previous point
@@ -49,9 +53,9 @@ void ofApp::draw(){
     
     if (b_drawGui){
         ofDrawBitmapString("drunkards walk random number demo \npress space to make a big step, 'm' to stagger a little bit", 10, 10);
-
+        
     }
-
+    
 }
 
 //--------------------------------------------------------------

@@ -33,6 +33,7 @@ class ofApp : public ofBaseApp{
     bool b_drawGui;
     
    // make the lines draw and display in 3D
-    ofEasyCam cam;
+//    ofEasyCam cam;
+//    ofTrueTypeFont font;
 };
 
