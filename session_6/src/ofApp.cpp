@@ -10,7 +10,9 @@ void ofApp::setup(){
     ofVec2f newPoint(0,0); // create a new point with 0,0 x and y values
     drunkardsSteps.push_back(newPoint); // push the newpoint to the back out out vector-list of points
     
-    staggerSize =40; // set how far to stagger when we add staggers to the walk of points
+    staggerSize =60; // set how far to stagger when we add staggers to the walk of points
+    
+    b_drawGui = true;
 }
 
 //--------------------------------------------------------------
@@ -20,6 +22,8 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+    
+    // cam.begin();
     int prevStepX = ofGetWidth()/2; // set up initial values to start drawing from - this is the centre of the screen
     int prevStepY = ofGetHeight()/2;
     int curStepX = prevStepX;
@@ -32,15 +36,22 @@ void ofApp::draw(){
         ofSetColor(255);
         ofDrawLine(prevStepX, prevStepY,curStepX, curStepY); // draw a line between the last point and the current point
         
+        if (b_drawGui){
         ofSetColor(0);
         ofDrawBitmapString(i, curStepX, curStepY); // number the point
+        }
         
         prevStepX = curStepX; // update the value of the previous point
         prevStepY = curStepY;
     }
     
-    ofDrawBitmapString("drunkards walk random number demo \n press space to make a big step, 'm' to stagger a little bit", 10, 10);
+    // cam.end();
     
+    if (b_drawGui){
+        ofDrawBitmapString("drunkards walk random number demo \npress space to make a big step, 'm' to stagger a little bit", 10, 10);
+
+    }
+
 }
 
 //--------------------------------------------------------------
@@ -55,8 +66,16 @@ void ofApp::keyPressed(int key){
             addStagger();
             break;
             
+        case 'n':
+            addNoiseStep();
+            break;
+            
         case 'f':
-            ofToggleFullscreen();
+            ofToggleFullscreen(); // toggle full screen display
+            break;
+            
+        case 'g':
+            b_drawGui = !b_drawGui; //toggle the guid overlay on and off
             break;
     }
 }
@@ -126,6 +145,16 @@ void ofApp::addStagger(){
     
     ofVec2f lastStep = drunkardsSteps[drunkardsSteps.size()-1];
     ofVec2f newStep(lastStep.x + ofRandom(-staggerSize, staggerSize), lastStep.y + ofRandom(-staggerSize, staggerSize));
+    drunkardsSteps.push_back(newStep);
+    cout << ofToString(lastStep) << " " << ofToString(newStep) << endl;
+}
+
+//--------------------------------------------------------------
+
+void ofApp::addNoiseStep(){
+    // generate a new step based on perlin noise
+    ofVec2f lastStep = drunkardsSteps[drunkardsSteps.size()-1];
+    ofVec2f newStep(lastStep.x + (ofNoise(lastStep.x) -0.5f) * staggerSize, lastStep.y + (ofNoise(lastStep.y) -0.5f) *staggerSize);
     drunkardsSteps.push_back(newStep);
     cout << ofToString(lastStep) << " " << ofToString(newStep) << endl;
 }

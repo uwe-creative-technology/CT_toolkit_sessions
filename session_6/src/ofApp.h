@@ -24,8 +24,15 @@ class ofApp : public ofBaseApp{
     // drunkards walk demo
     vector<ofVec2f> drunkardsSteps; // a vector - list to contain out x,y set values
     
-    void addStep(); // functions to add large or small steps/staggers
+    void addStep(); 
     void addStagger();
+    void addNoiseStep();
     
-    int staggerSize; 
+    int staggerSize;
+    
+    bool b_drawGui;
+    
+   // make the lines draw and display in 3D
+    ofEasyCam cam;
 };
+
