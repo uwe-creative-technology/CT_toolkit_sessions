@@ -15,11 +15,6 @@ class ofApp : public ofBaseApp{
 		void mouseDragged(int x, int y, int button);
 		void mousePressed(int x, int y, int button);
 		void mouseReleased(int x, int y, int button);
-		void mouseEntered(int x, int y);
-		void mouseExited(int x, int y);
-		void windowResized(int w, int h);
-		void dragEvent(ofDragInfo dragInfo);
-		void gotMessage(ofMessage msg);
 		
     // drunkards walk demo
     vector<ofVec2f> drunkardsSteps; // a vector - list to contain out x,y set values
@@ -29,11 +24,10 @@ class ofApp : public ofBaseApp{
     void addNoiseStep();
     
     int staggerSize;
+   // bool b_drawGui;
     
-    bool b_drawGui;
-    
-   // make the lines draw and display in 3D
-//    ofEasyCam cam;
-//    ofTrueTypeFont font;
+    // make the lines draw and display in 3D
+    // ofEasyCam cam;
+    // ofTrueTypeFont font;
 };
 
