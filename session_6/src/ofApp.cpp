@@ -39,12 +39,12 @@ void ofApp::draw(){
         ofSetColor(255);
         ofDrawLine(prevStepX, prevStepY,curStepX, curStepY); // draw a line between the last point and the current point
         
-        if (b_drawGui){
+       // if (b_drawGui){  // use this test to switch on or off the gui text
             ofSetColor(0);
             ofDrawBitmapString(i, curStepX, curStepY); // number the point
             // font.drawString(ofToString(i), curStepX, curStepY);// alternatively draw the number witha truetype font that will work in 3d
             
-        }
+       // }
         
         prevStepX = curStepX; // update the value of the previous point
         prevStepY = curStepY;
