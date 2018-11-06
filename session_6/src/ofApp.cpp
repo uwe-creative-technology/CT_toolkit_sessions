@@ -53,7 +53,7 @@ void ofApp::draw(){
     // cam.end(); // end using our easyCam object
     
     //    if (b_drawGui){ // check if we should show the onscreen gui/text
-    //        ofDrawBitmapString("drunkards walk random number demo \npress space to make a big step, 'm' to stagger a little bit", 10, 10);
+           ofDrawBitmapString("drunkards walk random number demo \npress 'space' to make a big step \n'm' to stagger a little bit \n'n'to add a stagger from perlin noise", 10, 10);
     //
     //    }
     
