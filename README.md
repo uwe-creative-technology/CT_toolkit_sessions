@@ -56,12 +56,20 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
 
 # Session 5 - introduction to complex transformation
 
-• algorithms and transformations
+• introduction to text processing
 
-• control and feedback
+• intelligence and algorithms
 
 # Session 6 - thinking about systems and control
 
-• intelligence
+• simple algorithms
 
-• ambient systems and environments
+• drunkards walk 3 ways including Perlin Noise
+
+# Session 7 - external input and output with serial
+
+• serial input and output with oF and arduino
+
+• send values to serial port
+
+• retrieve values from serial port
