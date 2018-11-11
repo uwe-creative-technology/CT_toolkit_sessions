@@ -1,4 +1,4 @@
-# UWE Bristol Creative Technology Toolkit session six
+# UWE Bristol Creative Technology Toolkit session seven
 
 https://github.com/uwe-creative-technology/CT_toolkit_sessions
 
