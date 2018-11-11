@@ -31,11 +31,15 @@ use this script for your arduino sketch
   Ultra-simple sketch to demonstrate the use of Arduino with
   openFrameworks.
 
-  This sketch is written to be used with the UWE Creative Technology Toolkit course serialExample or can work with the serialExample program that comes with the openFrameworks library. It initializes a serialport with a speed of 9600 baud, then waits for serialExample to send a character ('a' by default), then responds with three dollar signs.
+  This sketch is written to be used with the UWE Creative Technology Toolkit course serialExample or can work with the
+   serialExample program that comes with the openFrameworks library. It initializes a serialport
+   with a speed of 9600 baud, then waits for serialExample to send a character ('a' by default), then responds with three dollar signs.
 
-  To use this sketch with oF, program your Arduino, make sure the Arduino is the only vitual COM device in use, and then build and run the serialExample example in openFrameworks.
+  To use this sketch with oF, program your Arduino, make sure the Arduino is the only
+  virtual COM device in use, and then build and run the serialExample example in openFrameworks.
 
   Released under the Creative Commons Share-Alike License 10/2011
+  
   modifed by Dan Buzzo 11/2018
 */
 
