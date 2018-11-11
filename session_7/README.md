@@ -14,7 +14,6 @@ https://github.com/danbz
 https://buzzo.com
 
 
-
 # Session 7
 
 • serial input and output with oF and arduino
