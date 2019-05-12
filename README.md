@@ -4,7 +4,9 @@ example code for the Creative Technology Toolkit module on Creative Technology M
 
 http://uwecreativetechnology.com
 
-Dan Buzzo, September 2018
+Dan Buzzo, May 2019
+
+branch for raspberryPi
 
 https://github.com/danbz
 
