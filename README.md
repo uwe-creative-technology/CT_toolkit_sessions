@@ -6,7 +6,7 @@ http://uwecreativetechnology.com
 
 Dan Buzzo, May 2019
 
-branch for raspberryPi
+updated examples for raspberryPi compatibility
 
 https://github.com/danbz
 
