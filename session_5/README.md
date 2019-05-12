@@ -70,3 +70,5 @@ This Example uses the following classes:
 
 * http://openframeworks.cc/documentation/graphics/ofTrueTypeFont/
 * http://openframeworks.cc/documentation/utils/ofUtils/
+
+nb. on RaspberryPi - if running oF app alongside xWindows desktop the file dialog is created under/alongside the oF Window.This is because oF on raspberryPi is meant to run outside of xwindows as it directly interfaces the GPU
