@@ -7,7 +7,7 @@ example code for the Creative Technology Toolkit module on Creative Technology M
 
 http://uwecreativetechnology.com
 
-Dan Buzzo, September 2018
+Dan Buzzo, September 2019
 
 https://github.com/danbz
 
@@ -22,3 +22,6 @@ Simple example to
 • triangulate vertices and add indices to create triangle mesh
 • use ofRandom() function to change the vertices z co-ordinates to distort the Mesh
  
+included is a compiled binary for OSX
+
+ ![screenshot](mesh-example-screenshot.png)
