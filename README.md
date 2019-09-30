@@ -27,6 +27,9 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
 
 • using input to modify output
 
+ ![screenshot](Session_1/screenshot-session1.png)
+
+
 # Session 2 - images, video, complex input
 
 • visual sensing
@@ -37,8 +40,7 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
 
 • loops
 
-• slit scan camera imaging
-
+ ![screenshot](Session_2/screenshot-session2.png)
 
 # Session 3 - 3D input and 3D output to screen
 
@@ -50,11 +52,16 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
 
 • reading data from Kinect Sensor
 
+ ![screenshot](Session_3/screenshot-session3.png)
+
 # Session 4 - introduction to audio in openFrameworks
 
 • audio output
 
 • speech output
+
+ ![screenshot](Session_4/screenshot-session4.png)
+
 
 # Session 5 - introduction to complex transformation
 
@@ -62,11 +69,17 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
 
 • intelligence and algorithms
 
+ ![screenshot](Session_5/screenshot-session5.png)
+
+
 # Session 6 - thinking about systems and control
 
 • simple algorithms
 
 • drunkards walk 3 ways including Perlin Noise
+
+ ![screenshot](Session_6/screenshot-session6.png)
+
 
 # Session 7 - external input and output with serial
 
@@ -75,3 +88,23 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
 • send values to serial port
 
 • retrieve values from serial port
+
+ ![screenshot](Session_7/screenshot-session7.png)
+
+
+# Slit Scan Example
+
+• Simple example to retrieve live image data from a webcam and re-draw a line at a time to the screen
+
+ ![screenshot](slitscan-example/slitscan-example-screenshot.png)
+
+# Mesh Example
+
+Simple example to
+• generate an openFrameworks (openframeworks.cc) mesh object
+• use ofEasyCam to view our 3D scene
+• populate it with vertices
+• triangulate vertices and add indices to create triangle mesh
+• use ofRandom() function to change the vertices z co-ordinates to distort the Mesh
+
+ ![screenshot](meshExample/mesh-example-screenshot.png)
