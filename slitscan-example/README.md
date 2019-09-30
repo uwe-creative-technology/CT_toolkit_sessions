@@ -16,3 +16,7 @@ https://buzzo.com
 #Slitscan Example
 
 Simple example to retrieve live image data from a webcam and re-draw a line at a time to the screen
+
+included is a compiled binary for OSX
+
+ ![screenshot](slitscan-example-screenshot.png)

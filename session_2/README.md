@@ -31,3 +31,5 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
 
 
  This session shows how to instantiate a video grabber object in the header file, draw the data from that object to screen and then manipulate it. Parts based on the oF ascii vidgrabber example and including code to create a slit-scan camera http://www.flong.com/texts/lists/slit_scan/
+ 
+ ![screenshot](screenshot-session2.png)
