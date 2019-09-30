@@ -27,7 +27,7 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
 
 • using input to modify output
 
- ![screenshot](Session_1/screenshot-session1.png)
+ ![screenshot](session_1/screenshot-session1.png)
 
 
 # Session 2 - images, video, complex input
@@ -40,7 +40,7 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
 
 • loops
 
- ![screenshot](Session_2/screenshot-session2.png)
+ ![screenshot](session_2/screenshot-session2.png)
 
 # Session 3 - 3D input and 3D output to screen
 
@@ -52,7 +52,7 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
 
 • reading data from Kinect Sensor
 
- ![screenshot](Session_3/screenshot-session3.png)
+ ![screenshot](session_3/screenshot-session3.png)
 
 # Session 4 - introduction to audio in openFrameworks
 
@@ -60,7 +60,7 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
 
 • speech output
 
- ![screenshot](Session_4/screenshot-session4.png)
+ ![screenshot](session_4/screenshot-session4.png)
 
 
 # Session 5 - introduction to complex transformation
@@ -69,7 +69,7 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
 
 • intelligence and algorithms
 
- ![screenshot](Session_5/screenshot-session5.png)
+ ![screenshot](session_5/screenshot-session5.png)
 
 
 # Session 6 - thinking about systems and control
@@ -78,7 +78,7 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
 
 • drunkards walk 3 ways including Perlin Noise
 
- ![screenshot](Session_6/screenshot-session6.png)
+ ![screenshot](session_6/screenshot-session6.png)
 
 
 # Session 7 - external input and output with serial
@@ -89,7 +89,7 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
 
 • retrieve values from serial port
 
- ![screenshot](Session_7/screenshot-session7.png)
+ ![screenshot](session_7/screenshot-session7.png)
 
 
 # Slit Scan Example
