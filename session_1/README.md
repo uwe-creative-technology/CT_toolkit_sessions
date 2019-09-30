@@ -29,5 +29,6 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
  • using input to your system to control drawing output
 
 
-
 useful online colorpicker https://rgbcolorcode.com
+
+![screenshot](screenshot-session1.png)
