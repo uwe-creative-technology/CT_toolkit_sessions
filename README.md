@@ -52,7 +52,8 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
 
 • reading data from Kinect Sensor
 
- ![screenshot](session_3/screenshot-session3.png)
+ ![screenshot](session_3/screenshot-session3-1.png)
+ ![screenshot](session_3/screenshot-session3-2.png)
 
 # Session 4 - introduction to audio in openFrameworks
 
