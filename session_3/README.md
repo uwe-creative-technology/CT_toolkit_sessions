@@ -29,3 +29,6 @@ see also the openframeworks examples included in the standard oF install at;
 • oF-rootfolder/examples/computer_vision/kinect_example
 • oF-rootfolder/examples/3d/easyCamExample
 • oF-rootfolder/examples/3d/3DPrimitivesExample
+
+![screenshot](screenshot-session3-1.png)
+![screenshot](screenshot-session3-2.png)
