@@ -4,9 +4,9 @@ example code for the Creative Technology Toolkit module on Creative Technology M
 
 http://uwecreativetechnology.com
 
-Dan Buzzo, May 2019
+Dan Buzzo, October 2019
 
-updated examples for raspberryPi compatibility
+updated examples for raspberryPi compatibility // updates for OSX - XCODE11
 
 https://github.com/danbz
 
