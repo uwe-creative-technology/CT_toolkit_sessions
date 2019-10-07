@@ -7,7 +7,7 @@ example code for the Creative Technology Toolkit module on Creative Technology M
 
 http://uwecreativetechnology.com
 
-Dan Buzzo, September 2018
+Dan Buzzo, October 2019
 
 https://github.com/danbz
 
@@ -17,7 +17,7 @@ https://buzzo.com
 
 • introduction to 3D
 
-• 3D primitives, cameras
+• 3D primitives, 3d cameras
 
 • sensing in 3D
 
