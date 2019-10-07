@@ -7,7 +7,7 @@ example code for the Creative Technology Toolkit module on Creative Technology M
 
 http://uwecreativetechnology.com
 
-Dan Buzzo, November 2018
+Dan Buzzo, October 2019
 
 https://github.com/danbz
 
@@ -20,3 +20,5 @@ https://buzzo.com
 • simple algorithms
 
 • drunkards walk 3 ways including Perlin Noise
+
+![screenshot](screenshot-session6.png)
