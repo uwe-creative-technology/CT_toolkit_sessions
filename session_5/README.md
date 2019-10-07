@@ -7,7 +7,7 @@ example code for the Creative Technology Toolkit module on Creative Technology M
 
 http://uwecreativetechnology.com
 
-Dan Buzzo, September 2018
+Dan Buzzo, October 2019
 
 https://github.com/danbz
 
@@ -70,5 +70,7 @@ This Example uses the following classes:
 
 * http://openframeworks.cc/documentation/graphics/ofTrueTypeFont/
 * http://openframeworks.cc/documentation/utils/ofUtils/
+
+![screenshot](screenshot-session5.png)
 
 nb. on RaspberryPi - if running oF app alongside xWindows desktop the file dialog is created under/alongside the oF Window.This is because oF on raspberryPi is meant to run outside of xwindows as it directly interfaces the GPU
