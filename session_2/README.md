@@ -6,7 +6,8 @@ example code for the Creative Technology Toolkit module on Creative Technology M
 
 http://uwecreativetechnology.com
 
-Dan Buzzo, September 2018
+Dan Buzzo, October 2018
+plist permissions updates for Xcode11
 
 https://github.com/danbz
 
