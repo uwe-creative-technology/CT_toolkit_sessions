@@ -19,12 +19,14 @@ and
 the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
 
 # Class Example - using classes in OpenFrameworks
-
- • writing your first class
- • declaring methods and parameters
- • drawing to the screen
- • making vectors of our custom objects defined by our new class
  this example shows a very basic demo of creating and using classes and defining class methods in C++ / openFrameworks
-
-
+ 
+ • writing your first class
+ 
+ • declaring methods and parameters
+ 
+ • drawing to the screen
+ 
+ • making vectors of our custom objects defined by our new class
+ 
 ![screenshot](screenshot-classExample.png)
