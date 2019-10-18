@@ -103,9 +103,13 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
 
 Simple example to
 • generate an openFrameworks (openframeworks.cc) mesh object
+
 • use ofEasyCam to view our 3D scene
+
 • populate it with vertices
+
 • triangulate vertices and add indices to create triangle mesh
+
 • use ofRandom() function to change the vertices z co-ordinates to distort the Mesh
 
  ![screenshot](meshExample/mesh-example-screenshot.png)
@@ -113,9 +117,13 @@ Simple example to
  # Class Example - using classes in OpenFrameworks
 
   • writing your first class
+  
   • declaring methods and parameters
+  
   • drawing to the screen
+  
   • making vectors of our custom objects defined by our new class
+  
   this example shows a very basic demo of creating and using classes and defining class methods in C++ / openFrameworks
 
 
