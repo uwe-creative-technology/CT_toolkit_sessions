@@ -20,4 +20,4 @@ https://buzzo.com
 
 • generation of our custom particle objects and placement in a vector for drawing and updating
 
- ![screenshot](particleExample/particleExample-screenshot.png)
+ ![screenshot](particleExample-screenshot.png)
