@@ -109,3 +109,12 @@ Simple example to
 • use ofRandom() function to change the vertices z co-ordinates to distort the Mesh
 
  ![screenshot](meshExample/mesh-example-screenshot.png)
+
+# Simple Particle Example
+
+• Simple example showing use of a custom 'particle' class 
+
+• generation of our custom particle objects and placement in a vector for drawing and updating
+
+ ![screenshot](particleExample/particleExample-screenshot.png)
+
