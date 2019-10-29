@@ -137,5 +137,4 @@ Simple example to
 
 
  ![screenshot](classExample/screenshot-classExample.png)
->>>>>>> ab29b8fdf87a7a13bc746cc5edf5668a893b7fd2
 
