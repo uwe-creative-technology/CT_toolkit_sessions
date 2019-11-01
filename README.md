@@ -2,6 +2,12 @@
 
 example code for the Creative Technology Toolkit module on Creative Technology MSc at UWE Bristol
 
+video walk throughs of all code examples here can be found on YouTube at
+
+https://www.youtube.com/playlist?list=PL6QF0yo3Zj7ALxV4MyOJ9oSFsV-Mo39R2
+
+
+
 http://uwecreativetechnology.com
 
 Dan Buzzo, October 2019
