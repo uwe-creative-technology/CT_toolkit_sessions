@@ -7,13 +7,13 @@ example code for the Creative Technology Toolkit module on Creative Technology M
 
 http://uwecreativetechnology.com
 
-Dan Buzzo, September 2019
+Dan Buzzo, October 2019
 
 https://github.com/danbz
 
 https://buzzo.com
 
-#Mesh Example
+#Mesh, noise and perlin noise Example
 
 Simple example to
 • generate an openFrameworks (openframeworks.cc) mesh object
@@ -21,7 +21,19 @@ Simple example to
 • populate it with vertices
 • triangulate vertices and add indices to create triangle mesh
 • use ofRandom() function to change the vertices z co-ordinates to distort the Mesh
+• use 2 dimensional Perlin Noise() function to change the vertices z co-ordinates to distort the Mesh
  
+##key controls
+• f: toggle full screen 
+• spacebar: random z-value in meshvertices
+• w: draw wireframe or point cloud 
+• p: use PerlinNoise for z-value in meshvertices
+• Up-key Down-key: increase/decrease PerlinNoise input range 
+• Right-key Left-key: increase/decrease amplitude of Perlin Noise distortion 
+• click and drag in window to move camera
+
 included is a compiled binary for OSX
 
- ![screenshot](mesh-example-screenshot.png)
+![screenshot](mesh-example-screenshot.png)
+
+![screenshot](mesh-example-screenshot2.png)

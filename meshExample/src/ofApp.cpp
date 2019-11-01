@@ -1,15 +1,29 @@
 #include "ofApp.h"
 
+// Dan Buzzo 2019 -
+// http://buzzo.com
+// https://github.com/danbz
+// for UWE Bristol, Creative Technology MSc, Creative Technology Toolkit module 2019-20
+// https://github.com/uwe-creative-technology
+// http://uwecreativetechnology.com
+
+
 //--------------------------------------------------------------
 void ofApp::setup(){
     
     //set the width and height for our mesh and initial rendering values
     width = 50;
     height = 50;
-    bmessyMesh = false;
-    bdrawWireFrame = true;
+    // set our rendering styles to false
+    b_messyMesh = false;
+    b_perlinMesh = false;
+    b_drawWireFrame = true;
+    // set the initial values to use for our perlinNoise
+    perlinRange =1.0;
+    perlinHeight = 5.0;
     
     ofBackground(255); // set the window background to white
+    mainCam.setPosition(0, 0, 80); // set initial position for our easyCam 3D viewer
     
     // here we make the points inside our mesh
     // add one vertex to the mesh across our width and height
@@ -43,7 +57,7 @@ void ofApp::setup(){
 void ofApp::update(){
     
     // change the z value for each vertex in our mesh
-    if (bmessyMesh) {
+    if (b_messyMesh) {
         for (int i = 0; i < mainMesh.getNumVertices(); i++){ // find the total of all the vertices in the mesh and loop through them
             ofVec3f newPosition = mainMesh.getVertex(i); // get the current x,y,z position of this vertex
             newPosition.z = ofRandom(-1.0, 1.0); // set the z value of it to a new random number
@@ -51,14 +65,28 @@ void ofApp::update(){
             
         }
     }
+    
+    if (b_perlinMesh){
+        // distort the z value of each point in our mesh with perlinNoise
+        int i=0;
+        for (int y = 0; y<height; y++){
+            for (int x=0; x<width; x++){
+                ofVec3f newPosition = mainMesh.getVertex(i);
+                // use the ofMap function to map our x,y inputs to a variable outpur range so we can see different levels of complexity / density in the perlinNoise. then multiply the z distortion by our perlinHeight value to get amplitude of distortion.
+                newPosition.z = ofNoise(ofMap(x, 0, width, 0, perlinRange),  ofMap(y, 0, height, 0, perlinRange) ) * perlinHeight;
+                mainMesh.setVertex(i, newPosition); // update the position of the vertex with the new
+                i++;
+            }
+        }
+    }
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
     
-    mainCam.begin(); 
+    mainCam.begin();
     
-    if (bdrawWireFrame){ // choose to draw our mesh as wireframe or point cloud
+    if (b_drawWireFrame){ // choose to draw our mesh as wireframe or point cloud
         mainMesh.drawWireframe();
     } else {
         mainMesh.drawVertices();
@@ -67,7 +95,7 @@ void ofApp::draw(){
     
     //draw the controls as text on the screen
     ofSetColor(100);
-    string msg = "f: toggle full screen, spacebar: random zvalue in meshvertices, w: draw wireframe or point cloud";
+    string msg = "f: toggle full screen, spacebar: random z-value in meshvertices, w: draw wireframe or point cloud \np: use PerlinNoise for z-value in meshvertices\nUp-key Down-key: increase/decrease PerlinNoise input range \nRight-key Left-key: increase/decrease amplitude of Perlin Noise distortion \nclick and drag in window to move camera";
     ofDrawBitmapString(msg, 10, 20);
 }
 
@@ -80,11 +108,35 @@ void ofApp::keyPressed(int key){
             break;
             
         case ' ':
-            bmessyMesh = !bmessyMesh;
+            b_messyMesh = !b_messyMesh;
             break;
             
         case 'w':
-            bdrawWireFrame = !bdrawWireFrame;
+            b_drawWireFrame = !b_drawWireFrame;
+            break;
+            
+        case 'p':
+            b_perlinMesh = !b_perlinMesh;
+            break;
+            
+        case OF_KEY_UP: // increase or decrease the range/detail of the perlinNoise value
+            perlinRange +=0.1;
+            break;
+            
+        case OF_KEY_DOWN: // increase or decrease the range/detail of the perlinNoise value
+            if (perlinRange > 0.1){
+                perlinRange -=0.1;
+            }
+            break;
+            
+        case OF_KEY_RIGHT: // increase or decrease the height of the perlinNoise distortion
+            perlinHeight +=0.1;
+            break;
+            
+        case OF_KEY_LEFT: // increase or decrease the height of the perlinNoise distortion
+            if (perlinHeight > 0.1){
+                perlinHeight -=0.1;
+            }
             break;
     }
 }
@@ -94,46 +146,3 @@ void ofApp::keyReleased(int key){
     
 }
 
-//--------------------------------------------------------------
-void ofApp::mouseMoved(int x, int y ){
-    
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseDragged(int x, int y, int button){
-    
-}
-
-//--------------------------------------------------------------
-void ofApp::mousePressed(int x, int y, int button){
-    
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseReleased(int x, int y, int button){
-    
-}
-
-void ofApp::mouseEntered(int x, int y){
-    
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseExited(int x, int y){
-    
-}
-
-//--------------------------------------------------------------
-void ofApp::windowResized(int w, int h){
-    
-}
-
-//--------------------------------------------------------------
-void ofApp::gotMessage(ofMessage msg){
-    
-}
-
-//--------------------------------------------------------------
-void ofApp::dragEvent(ofDragInfo dragInfo){ 
-    
-}

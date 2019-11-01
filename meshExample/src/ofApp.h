@@ -2,6 +2,15 @@
 
 #include "ofMain.h"
 
+// Dan Buzzo 2019 -
+// http://buzzo.com
+// https://github.com/danbz
+// for UWE Bristol, Creative Technology MSc, Creative Technology Toolkit module 2019-20
+// https://github.com/uwe-creative-technology
+// http://uwecreativetechnology.com
+
+
+
 class ofApp : public ofBaseApp{
 public:
     void setup();
@@ -10,21 +19,12 @@ public:
     
     void keyPressed(int key);
     void keyReleased(int key);
-    void mouseMoved(int x, int y );
-    void mouseDragged(int x, int y, int button);
-    void mousePressed(int x, int y, int button);
-    void mouseReleased(int x, int y, int button);
-    void mouseEntered(int x, int y);
-    void mouseExited(int x, int y);
-    void windowResized(int w, int h);
-    void dragEvent(ofDragInfo dragInfo);
-    void gotMessage(ofMessage msg);
+
     
     // make a new mesh object
     ofMesh mainMesh;
     ofEasyCam mainCam;
-    int width;
-    int height;
-    bool bmessyMesh;
-    bool bdrawWireFrame;
+    int width, height;
+    bool b_messyMesh, b_perlinMesh, b_drawWireFrame;
+    float perlinRange, perlinHeight;
 };
