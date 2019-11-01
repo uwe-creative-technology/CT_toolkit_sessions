@@ -99,9 +99,10 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
 
  ![screenshot](slitscan-example/slitscan-example-screenshot.png)
 
-# Mesh Example
+#Mesh, noise and perlin noise Example
 
 Simple example to
+
 • generate an openFrameworks (openframeworks.cc) mesh object
 
 • use ofEasyCam to view our 3D scene
@@ -112,7 +113,10 @@ Simple example to
 
 • use ofRandom() function to change the vertices z co-ordinates to distort the Mesh
 
+• use 2 dimensional Perlin Noise() function to change the vertices z co-ordinates to distort the Mesh
+
  ![screenshot](meshExample/mesh-example-screenshot.png)
+  ![screenshot](meshExample/mesh-example-screenshot2.png)
 
 # Simple Particle Example
 
