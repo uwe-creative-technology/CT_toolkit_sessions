@@ -1,5 +1,13 @@
 #include "ofApp.h"
  
+// Dan Buzzo 2019 -
+// http://buzzo.com
+// https://github.com/danbz
+// for UWE Bristol, Creative Technology MSc, Creative Technology Toolkit module 2019-20
+// https://github.com/uwe-creative-technology
+// http://uwecreativetechnology.com
+
+
 //--------------------------------------------------------------
 void ofApp::setup(){
     ofSetVerticalSync(true);
@@ -65,7 +73,7 @@ void ofApp::keyPressed  (int key){
             break;
             
         case 'c':
-            serial.writeByte('b');
+            serial.writeByte('c');
             cout << "flash white LED" << endl;
             break;
             
@@ -78,49 +86,3 @@ void ofApp::keyPressed  (int key){
 void ofApp::keyReleased(int key){ 
     
 }
-
-//--------------------------------------------------------------
-void ofApp::mouseMoved(int x, int y){
-    
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseDragged(int x, int y, int button){
-    
-}
-
-//--------------------------------------------------------------
-void ofApp::mousePressed(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseReleased(int x, int y, int button){
-    
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseEntered(int x, int y){
-    
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseExited(int x, int y){
-    
-}
-
-//--------------------------------------------------------------
-void ofApp::windowResized(int w, int h){
-    
-}
-
-//--------------------------------------------------------------
-void ofApp::gotMessage(ofMessage msg){
-    
-}
-
-//--------------------------------------------------------------
-void ofApp::dragEvent(ofDragInfo dragInfo){ 
-    
-}
-
