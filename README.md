@@ -96,7 +96,7 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
 
 • retrieve values from serial port
 
- ![screenshot](session_7/screenshot-session7.png)
+ ![screenshot](session_7/screenshot-session7.jpg)
 
 
 # Slit Scan Example
