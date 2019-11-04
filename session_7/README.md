@@ -28,7 +28,7 @@ https://buzzo.com
 • retrieve values from serial port
 
 
-![screenshot](screenshot-session7.png)
+![screenshot](screenshot-session7.jpg)
 
 use this script for your arduino sketch
 
