@@ -148,3 +148,18 @@ Simple example to
 
  ![screenshot](classExample/screenshot-classExample.png)
 
+
+##video file playback and control
+
+Simple example to
+
+• use the ofVideoPlayer object to play a video file from disk
+
+• use videoPlayer methods to control looping style and pkayback speed of our video file
+
+• using ofMap to create a playback position indicator bar
+
+• using mousePressed message to create simple clickable interface
+
+
+ ![screenshot](videoPlayerExample/video-example-screenshot.png)
