@@ -23,7 +23,7 @@ OpenFrameworks Introduction course at ICON http://www.icon-brussels.be/?page_id=
 and
 the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
 
-# Session 1 - introduction to OpenFrameworks
+## Session 1 - introduction to OpenFrameworks
 
 • running your first code
 
@@ -36,7 +36,7 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
  ![screenshot](session_1/screenshot-session1.png)
 
 
-# Session 2 - images, video, complex input
+## Session 2 - images, video, complex input
 
 • visual sensing
 
@@ -48,7 +48,7 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
 
  ![screenshot](session_2/screenshot-session2.png)
 
-# Session 3 - 3D input and 3D output to screen
+## Session 3 - 3D input and 3D output to screen
 
 • introduction to 3D
 
@@ -61,7 +61,7 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
  ![screenshot](session_3/screenshot-session3-1.png)
  ![screenshot](session_3/screenshot-session3-2.png)
 
-# Session 4 - introduction to audio in openFrameworks
+## Session 4 - introduction to audio in openFrameworks
 
 • audio output
 
@@ -70,7 +70,7 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
  ![screenshot](session_4/screenshot-session4.png)
 
 
-# Session 5 - introduction to complex transformation
+## Session 5 - introduction to complex transformation
 
 • introduction to text processing
 
@@ -79,7 +79,7 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
  ![screenshot](session_5/screenshot-session5.png)
 
 
-# Session 6 - thinking about systems and control
+## Session 6 - thinking about systems and control
 
 • simple algorithms
 
@@ -88,7 +88,7 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
  ![screenshot](session_6/screenshot-session6.png)
 
 
-# Session 7 - external input and output with serial
+## Session 7 - external input and output with serial
 
 • serial input and output with oF and arduino
 
@@ -99,13 +99,13 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
  ![screenshot](session_7/screenshot-session7.jpg)
 
 
-# Slit Scan Example
+## Slit Scan Example
 
 • Simple example to retrieve live image data from a webcam and re-draw a line at a time to the screen
 
  ![screenshot](slitscan-example/slitscan-example-screenshot.png)
 
-# Mesh, noise and perlin noise Example
+## Mesh, noise and perlin noise Example
 
 Simple example to
 
@@ -124,7 +124,7 @@ Simple example to
 ![screenshot](meshExample/mesh-example-screenshot.png)
 ![screenshot](meshExample/mesh-example-screenshot2.png)
 
-# Simple Particle Example
+## Simple Particle Example
 
 • Simple example showing use of a custom 'particle' class 
 
@@ -133,7 +133,7 @@ Simple example to
 ![screenshot](particleExample/particleExample-screenshot.png)
 
  
-# Class Example - using classes in OpenFrameworks
+## Class Example - using classes in OpenFrameworks
 
   • writing your first class
   
@@ -149,7 +149,7 @@ Simple example to
  ![screenshot](classExample/screenshot-classExample.png)
 
 
-# video file playback and control
+## video file playback and control
 
 Simple example to
 
