@@ -31,7 +31,7 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 		
     ofVideoPlayer vidPlayer;
-    float speed;
-    bool b_playing;
+    float speed, currentPosition;
+    bool b_playing, b_dragged;
     string loopStyle;
 };

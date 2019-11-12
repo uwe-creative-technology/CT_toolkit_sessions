@@ -12,13 +12,17 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+    // set up initial settings into our variables
+    loopStyle = "Normal";
+    b_playing = true;
+    b_dragged = false; // use this as a switch boolean to separate the mouseclick play/pause function and the dragging/scrub function
+    speed = 1.0;
+    
     // load a video file from disk from the bin/data folder
     // put your own file here and change the filename
     vidPlayer.load("stokes-croft-timelapse.m4v");
     vidPlayer.setLoopState(OF_LOOP_NORMAL); // set our initial loop style
-    loopStyle = "Normal";
-    b_playing = true;
-    speed = 1.0;
+   
     vidPlayer.play();
 }
 
@@ -34,8 +38,8 @@ void ofApp::draw(){
     
     
     vidPlayer.draw(10, 10); // draw the currnet video frame to screen
-   
-    elapsedPercent =   vidPlayer.getPosition() * 100; // get the current position of the video 'playhead'
+    
+    elapsedPercent = vidPlayer.getPosition() * 100; // get the current position of the video 'playhead'
     elapsedTime = ofToString( elapsedPercent );
     ofSetColor(255);
     
@@ -111,20 +115,30 @@ void ofApp::mouseMoved(int x, int y ){
 //--------------------------------------------------------------
 void ofApp::mouseDragged(int x, int y, int button){
     ofRectangle vidRect;
+    b_dragged =true; // show we are dragging to void the play/pause routine in mouseUp
+    // set the size of the the rectangle we a scrubbing video in
     vidRect.set(10, 10, vidPlayer.getWidth(), vidPlayer.getHeight());
     
     // get the mouse position and 'scrub' the video as we drag left and right inside the videorectangle
     if (vidRect.inside(x,y)){ // check to see if mouse press xy is inside the video rectangle
-        vidPlayer.setPosition( ofMap(x, 0, vidPlayer.getWidth(), 0, 1.0) );
+        vidPlayer.setPosition( ofMap( x, 0, vidPlayer.getWidth(), 0, 1.0) );
     }
 }
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-    ofRectangle vidRect;
-    vidRect.set(10, 10, vidPlayer.getWidth(), vidPlayer.getHeight());
     
-    if (vidRect.inside(x,y)){ // check to see if mouse press xy is inside the video rectangle
+}
+
+//--------------------------------------------------------------
+void ofApp::mouseReleased(int x, int y, int button){
+    ofRectangle vidRect;
+    
+    currentPosition = vidPlayer.getPosition();
+    vidRect.set(10, 10, vidPlayer.getWidth(), vidPlayer.getHeight());
+     
+    // if we have not been dragging then change the play/pause status of the video
+    if (!b_dragged && vidRect.inside(x,y)){ // check to see if mouse press xy is inside the video rectangle
         if (b_playing){ // if our video is playing then pause
             vidPlayer.setPaused(true);
             b_playing=!b_playing;
@@ -133,11 +147,7 @@ void ofApp::mousePressed(int x, int y, int button){
             b_playing=!b_playing;
         }
     }
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseReleased(int x, int y, int button){
-    
+    b_dragged = false; // reset the dragging switch boolean
 }
 
 //--------------------------------------------------------------
