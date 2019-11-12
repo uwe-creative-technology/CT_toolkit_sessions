@@ -105,7 +105,7 @@ the 'letsCodeExamples' from Zach Lieberman https://github.com/ofZach
 
  ![screenshot](slitscan-example/slitscan-example-screenshot.png)
 
-#Mesh, noise and perlin noise Example
+# Mesh, noise and perlin noise Example
 
 Simple example to
 
@@ -121,8 +121,8 @@ Simple example to
 
 • use 2 dimensional Perlin Noise() function to change the vertices z co-ordinates to distort the Mesh
 
- ![screenshot](meshExample/mesh-example-screenshot.png)
-  ![screenshot](meshExample/mesh-example-screenshot2.png)
+![screenshot](meshExample/mesh-example-screenshot.png)
+![screenshot](meshExample/mesh-example-screenshot2.png)
 
 # Simple Particle Example
 
@@ -130,10 +130,10 @@ Simple example to
 
 • generation of our custom particle objects and placement in a vector for drawing and updating
 
- ![screenshot](particleExample/particleExample-screenshot.png)
+![screenshot](particleExample/particleExample-screenshot.png)
 
  
- # Class Example - using classes in OpenFrameworks
+# Class Example - using classes in OpenFrameworks
 
   • writing your first class
   
@@ -149,7 +149,7 @@ Simple example to
  ![screenshot](classExample/screenshot-classExample.png)
 
 
-##video file playback and control
+# video file playback and control
 
 Simple example to
 
