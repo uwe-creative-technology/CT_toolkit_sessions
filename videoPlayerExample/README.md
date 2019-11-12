@@ -19,22 +19,30 @@ https://github.com/danbz
 
 https://buzzo.com
 
-#video file playback and control
+## Video file playback and control
 
 Simple example to
 • use the ofVideoPlayer object to play a video file from disk
+
 • use videoPlayer methods to control looping style and pkayback speed of our video file
+
 • using ofMap to create a playback position indicator bar
+
 • using mousePressed message to create simple clickable interface
-• 
+
  
-##key controls
-• f: toggle full screen 
-• spacebar: play and pause video
-• +/-: increase or decrease playback speed
-• 1: loop normal
-• 2: loop palindrome (backwards and forwards)
-• 3: loop none
+## key controls
+* f: toggle full screen 
+
+* spacebar: play and pause video
+
+* +/-: increase or decrease playback speed
+
+* 1: loop normal
+
+* 2: loop palindrome (backwards and forwards)
+
+* 3: loop none
 
 included is a compiled binary for OSX
 
