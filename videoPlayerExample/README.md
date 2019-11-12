@@ -44,6 +44,10 @@ Simple example to
 
 * 3: loop none
 
+* mouseclick on video: toggle play/pause
+
+* mousedrag left/right on video: scrub through video frames
+
 included is a compiled binary for OSX
 
 ![screenshot](video-example-screenshot.png)
